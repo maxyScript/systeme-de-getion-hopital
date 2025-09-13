@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Gestion des Résultats d'Examens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+    <div class="side-header">
+        <h3>Résultats<span> d'Examens</span></h3>
+    </div>
+    <div class="side-content">
+        <div class="profile">
+            <div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+            <h4>SGH</h4>
+            <small></small>
+        </div>
+        <div class="side-menu">
+            <ul>
+                <li>
+                    <a href="" class="active">
+                        <span class="las la-home"></span>
+                        <small>Tableau de Bord</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-user-alt"></span>
+                        <small>Profil</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-calendar"></span>
+                        <small>Consultations</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-comments"></span>
+                        <small>Messages</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-file-alt"></span>
+                        <small>Rapports</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-tasks"></span>
+                        <small>Évaluations</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <header>
+        <div class="header-content">
+            <label for="menu-toggle">
+                <span class="las la-bars"></span>
+            </label>
+            <div class="header-menu">
+                <label for="">
+                    <span class="las la-search"></span>
+                </label>
+                <div class="notify-icon">
+                    <span class="las la-envelope"></span>
+                    <span class="notify">4</span>
+                </div>
+                <div class="notify-icon">
+                    <span class="las la-bell"></span>
+                    <span class="notify">3</span>
+                </div>
+                <div class="user">
+                    <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                    <span class="las la-power-off"></span>
+                    <span>Déconnexion</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Gestion des Résultats d'Examens</h1>
+            <small>Accueil / Résultats</small>
+        </div>
+
+        <div class="page-content">
+            <div class="analytics">
+                <!-- Vos cartes d'analytics ici -->
+            </div>
+
+            <div class="records table-responsive">
+                <div class="record-header">
+                    <div class="add">
+                        <span>Entrées</span>
+                        <select name="" id="">
+                            <option value="">ID</option>
+                        </select>
+                        <button id="addExamResult">Envoyer Résultat</button>
+                    </div>
+                    <div class="browse">
+                        <input type="search" placeholder="Rechercher" class="record-search">
+                        <select name="" id="">
+                            <option value="">Statut</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="main--content">
+                        <div class="header--wrapper">
+                            <div class="header--title"></div>
+                            <div class="user--info">
+                                <div class="search--box">
+                                    <i class="fa-solid fa-search"></i>
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="card">
+                                <div class="form-group">
+                                    <label for="patientName">Nom du Patient:</label>
+                                    <input type="text" id="patientName" placeholder="Entrez le nom du patient">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patientEmail">Email du Patient:</label>
+                                    <input type="email" id="patientEmail" placeholder="Entrez l'email du patient">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examName">Nom de l'Examen:</label>
+                                    <input type="text" id="examName" placeholder="Entrez le nom de l'examen">
+                                </div>
+                                <div class="form-group">
+                                    <label for="result">Résultat:</label>
+                                    <input type="text" id="result" placeholder="Entrez le résultat">
+                                </div>
+                                <div class="form-group">
+                                    <label for="examDate">Date de l'Examen:</label>
+                                    <input type="date" id="examDate">
+                                </div>
+                                <button id="addExamResultButton">Ajouter Résultat</button>
+                                <button id="sendEmailButton">Envoyer par Email</button>
+                            </div>
+
+                            <div class="card">
+                                <h2>Détails de l'Examen</h2>
+                                <div class="invoice-card">
+                                    <img src="img/logom.jpg" alt="Logo de la Clinique" style="width: 100px;height: auto;margin-bottom: 10px">
+                                    <h2>CLINIMEDIC</h2>
+                                    <h3>Détails de l'Examen</h3>
+                                    <div id="examDetails"></div>
+                                    <button id="printExamButton">Imprimer Détails</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Liste des Résultats d'Examens</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nom du Patient</th>
+                                    <th>Email</th>
+                                    <th>Nom de l'Examen</th>
+                                    <th>Résultat</th>
+                                    <th>Date de l'Examen</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="examResultList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let examResults = [];
+
+        document.getElementById('addExamResultButton').addEventListener('click', function() {
+            const patientName = document.getElementById('patientName').value;
+            const patientEmail = document.getElementById('patientEmail').value;
+            const examName = document.getElementById('examName').value;
+            const result = document.getElementById('result').value;
+            const examDate = document.getElementById('examDate').value;
+
+            if (!patientName || !patientEmail || !examName || !result || !examDate) {
+                alert("Veuillez remplir tous les champs !");
+                return;
+            }
+
+            const examResult = {
+                patient: patientName,
+                email: patientEmail,
+                exam: examName,
+                result: result,
+                date: examDate,
+            };
+            examResults.push(examResult);
+            updateExamResultTable();
+            displayExamDetails();
+            resetForm();
+        });
+
+        function updateExamResultTable() {
+            const examResultList = document.getElementById('examResultList');
+            examResultList.innerHTML = '';
+            examResults.forEach((examResult, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>${examResult.patient}</td>
+                <td>${examResult.email}</td>
+                <td>${examResult.exam}</td>
+                <td>${examResult.result}</td>
+                <td>${examResult.date}</td>
+                <td><button class="delete-button icon" onclick="deleteExamResult(${index})">Supprimer</button></td>
+                `;
+                examResultList.appendChild(row);
+            });
+            if (examResults.length === 0) {
+                examResultList.innerHTML = '<tr><td colspan="6">Aucun résultat d\'examen disponible.</td></tr>';
+            }
+        }
+
+        function displayExamDetails() {
+            const examDetails = document.getElementById('examDetails');
+            examDetails.innerHTML = ''; // Clear previous details
+            examResults.forEach((examResult, index) => {
+                examDetails.innerHTML += `
+                <div>
+                    <strong>Examen ${index + 1}:</strong><br>
+                    Patient: ${examResult.patient}<br>
+                    Email: ${examResult.email}<br>
+                    Examen: ${examResult.exam}<br>
+                    Résultat: ${examResult.result}<br>
+                    Date de l'Examen: ${examResult.date}<br>
+                    <hr>
+                </div>
+                `;
+            });
+            // If no exam results, show a message
+            if (examResults.length === 0) {
+                examDetails.innerHTML = '<p>Aucun résultat d\'examen disponible.</p>';
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('patientName').value = '';
+            document.getElementById('patientEmail').value = '';
+            document.getElementById('examName').value = '';
+            document.getElementById('result').value = '';
+            document.getElementById('examDate').value = '';
+        }
+
+        function deleteExamResult(index) {
+            examResults.splice(index, 1);
+            updateExamResultTable();
+            displayExamDetails();
+        }
+
+        document.getElementById('printExamButton').addEventListener('click', function() {
+            const examDetails = document.getElementById('examDetails').innerHTML;
+            const newWindow = window.open('', '', 'width=600,height=400');
+            newWindow.document.write('<h1>Détails de l\'Examen</h1>');
+            newWindow.document.write(examDetails);
+            newWindow.document.close();
+            newWindow.print();
+        });
+
+        document.getElementById('sendEmailButton').addEventListener('click', function() {
+            examResults.forEach((examResult) => {
+                // Remplacez ceci par votre API d'envoi d'e-mail
+                console.log(`Envoi des résultats à ${examResult.email}...`);
+                // Exemple d'appel à une API fictive
+                /*
+                fetch('https://api.emailservice.com/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        to: examResult.email,
+                        subject: 'Résultats d\'Examen',
+                        body: `Voici les résultats de votre examen:\n\nNom: ${examResult.patient}\nExamen: ${examResult.exam}\nRésultat: ${examResult.result}\nDate: ${examResult.date}`
+                    })
+                }).then(response => {
+                    if (response.ok) {
+                        alert('Résultats envoyés avec succès !');
+                    } else {
+                        alert('Erreur lors de l\'envoi des résultats.');
+                    }
+                });
+                */
+               (function() {
+    emailjs.init("YOUR_USER_ID"); // Remplacez YOUR_USER_ID par votre ID utilisateur EmailJS
+})();
+document.getElementById('sendEmailButton').addEventListener('click', function() {
+    examResults.forEach((examResult) => {
+        const templateParams = {
+            to_name: examResult.patient,
+            to_email: examResult.email,
+            exam_name: examResult.exam,
+            exam_result: examResult.result,
+            exam_date: examResult.date,
+        };
+
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Résultats envoyés avec succès !');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Erreur lors de l\'envoi des résultats.');
+            });
+    });
+});
+            });
+        });
+    </script>
+    <style>
+        /* Styles similaires à ceux fournis dans l'exemple d'origine */
+        .header--wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .header--title h2 {
+            color: #28a745; /* Couleur verte pour la santé */
+        }
+        .user--info {
+            display: flex;
+            align-items: center;
+        }
+        .search--box {
+            position: relative;
+        }
+        .search--box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        h1 {
+            color: #22BAA0;
+        }
+        .form-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #e9ecef;
+            border-radius: 0px;
+            padding: 15px;
+            flex: 1 1 300px;
+        }
+        .card-1 {
+            background-color: #fff;
+            border-radius: 0px;
+            padding: 15px;
+            flex: 1 1 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input, button {
+            padding: 10px;
+            width: 100%;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #22BAA0;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #22BAA0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .icon {
+            cursor: pointer;
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .icon:hover {
+            color: #22BAA0;
+        }
+        .invoice-card {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #22BAA0;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .invoice-card h2 {
+            color: #22BAA0;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .invoice-card, .invoice-card * {
+                visibility: visible;
+            }
+            .invoice-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+<!--1234max@$2025-->
+</body>
+</html>

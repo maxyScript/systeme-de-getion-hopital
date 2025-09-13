@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Laboratoire SGH</title>
+</head>
+<body>
+    <header>
+        <h1>Gestion de Laboratoire SGH</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                <li><a href="#samples"><i class="fas fa-flask"></i> Échantillons</a></li>
+                <li><a href="#reports"><i class="fas fa-file-alt"></i> Rapports</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Paramètres</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="dashboard">
+                <h2>Tableau de bord</h2>
+                <p>Bienvenue dans le système de gestion de laboratoire.</p>
+            </section>
+
+            <section id="samples">
+                <h2>Échantillons</h2>
+                <button id="addSampleBtn" class="btn">Ajouter un Échantillon</button>
+                <ul id="sampleList"></ul>
+            </section>
+
+            <section id="reports">
+                <h2>Rapports</h2>
+                <button id="generateReportBtn" class="btn">Générer un Rapport</button>
+                <ul id="reportList"></ul>
+            </section>
+
+            <section id="settings">
+                <h2>Paramètres</h2>
+                <p>Configurer les paramètres du système.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Laboratoire SGH. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+section {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+</style>
+<script>
+// Ajouter un échantillon à la liste
+document.getElementById('addSampleBtn').addEventListener('click', function() {
+    const sampleList = document.getElementById('sampleList');
+    const sampleName = prompt("Entrez le nom de l'échantillon:");
+
+    if (sampleName) {
+        const listItem = document.createElement('li');
+        listItem.textContent = sampleName;
+        sampleList.appendChild(listItem);
+    }
+});
+
+// Générer un rapport (fonctionnalité de démonstration)
+document.getElementById('generateReportBtn').addEventListener('click', function() {
+    const reportList = document.getElementById('reportList');
+    const reportName = prompt("Entrez le nom du rapport:");
+
+    if (reportName) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `Rapport: ${reportName}`;
+        reportList.appendChild(listItem);
+    }
+});
+</script>
+</body>
+</html>

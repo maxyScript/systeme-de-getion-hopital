@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>liste de patients</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+    <style>
+        .stat-card-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Ajout d'un espacement en bas */
+        }
+        .stat-card {
+            background: #e9ecef;
+            border-radius: 10px;
+            padding: 7px;
+            margin: 10px;
+            text-align: center;
+            flex: 1; /* Rendre les cartes flexibles */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre pour les cartes */
+        }
+        .stat-card h3 {
+            margin: 5px 0;
+        }
+        .stat-card p {
+            font-size: 1.5em;
+            font-weight:lighter;
+        }
+      
+        h1, h2 {
+            text-align: center;
+            color: #74767d; /* Couleur verte pour la santé */
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #22BAA0;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+
+
+        body {
+            display: flex;
+        }
+   
+
+  
+
+
+        h1, h2 {
+            text-align: center;
+            color: #28a745; /* Couleur verte pour la santé */
+        }
+        
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>P<span>atients</span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+                <h4>SGH</h4>
+                <small></small>
+            </div>
+
+           <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="dasboard-main-1.html" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="ajouter-un-patients.html">
+                            <span class="fa-solid fa-bed"></span>
+                            <small>Patient</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="dashboard-urgences-medicales.html">
+                            <span class="las la-ambulance"></span>
+                            <small>Urgence</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-stethoscope"></span>
+                            <small>Consultation</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-laptop-medical"></span>
+                            <small>Prescription</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="liste-patients.html">
+                            <span class="las la-tasks"></span>
+                            <small>Liste des patients</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/adm.png)"></div>
+                        
+                        <span class="las la-power-off"></span>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>
+            
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Accueil / Dashboard</small>
+            </div>
+            
+            <div class="page-content">
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2> <p id="totalPatients">0</p></h2>
+                            <span class="las la-user-friends"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre de patients</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="malePatients">: 0</p>
+                            <span class="las la-eye"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Répartition par sexe</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="femalePatients">: 0</p>
+                            <span class="las la-shopping-cart"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Répartition par sexe</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="otherPatients"></p>
+                            <span class="las la-envelope"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Consulations</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+<div class="records table-responsive">
+
+                    <div class="record-header">
+                        <div class="add">
+                            <span>Liste des patients</span>
+                            
+                        </div>
+
+                        <div class="browse">
+                          <input type="text" id="searchInput" placeholder="Rechercher un patient...">
+                <button id="printAll"><i class="fas fa-print"></i></button>
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                       
+                      <table id="patientStatsTable">
+                            <thead>
+                                <tr>
+                           
+                        <tr> <th><span class="las la-sort"></span>Nom</th>
+                        <th><span class="las la-sort"></span>Prénom</th>
+                        <th><span class="las la-sort"></span>Date de Naissance</th>
+                        <th><span class="las la-sort"></span>Email</th>
+                        <th><span class="las la-sort"></span>Téléphone</th>
+                        <th><span class="las la-sort"></span>Adresse</th>
+                        <th><span class="las la-sort"></span>Sexe</th>
+                        <th><span class="las la-sort"></span>Maladie</th>
+                        <th><span class="las la-sort"></span>N° Sécurité Sociale</th>
+                        <th><span class="las la-sort"></span>Actions</th>
+                                   
+                                </tr>
+                            </thead>
+                             <tbody id="patientStatsList">
+                                
+                             </tbody>
+                           </table>
+                          
+                    </div>
+
+                </div>
+            
+            </div>
+            
+        </main>
+        
+    </div>
+                
+</body>
+<script>
+
+  
+      // Fonction pour afficher les statistiques
+    function afficherStatistiques() {
+        const patients = JSON.parse(localStorage.getItem('patients')) || [];
+        
+        // Remplir le tableau avec les détails des patients
+        const patientStatsList = document.getElementById('patientStatsList');
+        patientStatsList.innerHTML = ""; // Réinitialiser la liste
+
+
+            patients.forEach(patient => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${patient.nom}</td>
+                    <td>${patient.prenom}</td>
+                    <td>${patient.dateNaissance}</td>
+                    <td>${patient.email}</td>
+                    <td>${patient.telephone}</td>
+                    <td>${patient.adresse}</td>
+                    <td>${patient.sexe}</td>
+                    <td>${patient.maladie}</td>
+                    <td>${patient.numSecu}</td>
+                    
+                `;
+                patientStatsList.appendChild(row);
+            });
+        }
+
+        function imprimerDossier(nom, prenom) {
+            const row = event.target.closest('tr');
+            const details = `
+            Détails du Patient:
+            Nom: ${nom}
+            Prénom: ${prenom}
+            Date de Naissance: ${row.cells[2].textContent}
+            Email: ${row.cells[3].textContent}
+            Téléphone: ${row.cells[4].textContent}
+            Adresse: ${row.cells[5].textContent}
+            Sexe: ${row.cells[6].textContent}
+            Maladie: ${row.cells[7].textContent}
+            N° Sécurité Sociale: ${row.cells[8].textContent}
+            `;
+            const nouvelleFenetre = window.open('', '', 'width=600,height=400');
+            nouvelleFenetre.document.write('<pre>' + details + '</pre>');
+            nouvelleFenetre.document.close();
+            nouvelleFenetre.print();
+        }
+
+        function modifierDossier(nom, prenom) {
+            // Logique pour modifier un dossier
+            alert(`Modifier le dossier de ${nom} ${prenom}`);
+        }
+
+        function supprimerDossier(button) {
+            const row = button.closest('tr');
+            row.parentNode.removeChild(row);
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#patientStatsList tr');
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName('td');
+                const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filter));
+                row.style.display = match ? '' : 'none';
+            });
+        });
+
+        document.getElementById('printAll').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#patientStatsList tr');
+            const details = Array.from(rows).map(row => {
+                return `
+                Détails du Patient:
+                Nom: ${row.cells[0].textContent}
+                Prénom: ${row.cells[1].textContent}
+                Date de Naissance: ${row.cells[2].textContent}
+                Email: ${row.cells[3].textContent}
+                Téléphone: ${row.cells[4].textContent}
+                Adresse: ${row.cells[5].textContent}
+                Sexe: ${row.cells[6].textContent}
+                Maladie: ${row.cells[7].textContent}
+                N° Sécurité Sociale: ${row.cells[8].textContent}
+                `;
+            }).join('\n');
+
+            const nouvelleFenetre = window.open('', '', 'width=600,height=400');
+            nouvelleFenetre.document.write('<pre>' + details + '</pre>');
+            nouvelleFenetre.document.close();
+            nouvelleFenetre.print();
+        });
+
+        window.onload = afficherStatistiques;
+
+          // Fonction pour afficher les statistiques
+        function afficherStatistiques() {
+            const patients = JSON.parse(localStorage.getItem('patients')) || [];
+            const totalPatients = patients.length;
+            const malePatients = patients.filter(p => p.sexe === 'Masculin').length;
+            const femalePatients = patients.filter(p => p.sexe === 'Féminin').length;
+            const otherPatients = patients.filter(p => p.sexe === 'Autre').length;
+
+            // Mise à jour des statistiques
+            document.getElementById('totalPatients').innerText = totalPatients;
+            document.getElementById('malePatients').innerText = `Masculin: ${malePatients}`;
+            document.getElementById('femalePatients').innerText = `Féminin: ${femalePatients}`;
+            document.getElementById('otherPatients').innerText = `Autre: ${otherPatients}`;
+
+            // Remplir le tableau avec les détails des patients
+            const patientStatsList = document.getElementById('patientStatsList');
+            patientStatsList.innerHTML = ""; // Réinitialiser la liste
+
+            patients.forEach(patient => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${patient.nom}</td>
+                    <td>${patient.prenom}</td>
+                    <td>${patient.dateNaissance}</td>
+                    <td>${patient.email}</td>
+                    <td>${patient.telephone}</td>
+                    <td>${patient.adresse}</td>
+                    <td>${patient.sexe}</td>
+                    <td>${patient.maladie}</td>
+                    <td>${patient.numSecu}</td>
+                    <td class="action-buttons">
+                        <button onclick="imprimerDossier('${patient.nom}', '${patient.prenom}')"><i class="fas fa-print"></i></button>
+                        <button onclick="modifierDossier('${patient.nom}', '${patient.prenom}')"><i class="fas fa-edit"></i></button>
+                        <button onclick="supprimerDossier(this)"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                `;
+                patientStatsList.appendChild(row);
+            });
+        }
+    // Appel de la fonction pour afficher les statistiques lors du chargement de la page
+    window.onload = afficherStatistiques;
+   // Fonction pour afficher les statistiques
+    function afficherStatistiques() {
+        const patients = JSON.parse(localStorage.getItem('patients')) || [];
+        
+        // Remplir le tableau avec les détails des patients
+        const patientStatsList = document.getElementById('patientStatsList');
+        patientStatsList.innerHTML = ""; // Réinitialiser la liste
+
+
+            patients.forEach(patient => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${patient.nom}</td>
+                    <td>${patient.prenom}</td>
+                    <td>${patient.dateNaissance}</td>
+                    <td>${patient.email}</td>
+                    <td>${patient.telephone}</td>
+                    <td>${patient.adresse}</td>
+                    <td>${patient.sexe}</td>
+                    <td>${patient.maladie}</td>
+                    <td>${patient.numSecu}</td>
+                    
+                `;
+                patientStatsList.appendChild(row);
+            });
+        }
+
+        function imprimerDossier(nom, prenom) {
+            const row = event.target.closest('tr');
+            const details = `
+            Détails du Patient:
+            Nom: ${nom}
+            Prénom: ${prenom}
+            Date de Naissance: ${row.cells[2].textContent}
+            Email: ${row.cells[3].textContent}
+            Téléphone: ${row.cells[4].textContent}
+            Adresse: ${row.cells[5].textContent}
+            Sexe: ${row.cells[6].textContent}
+            Maladie: ${row.cells[7].textContent}
+            N° Sécurité Sociale: ${row.cells[8].textContent}
+            `;
+            const nouvelleFenetre = window.open('', '', 'width=600,height=400');
+            nouvelleFenetre.document.write('<pre>' + details + '</pre>');
+            nouvelleFenetre.document.close();
+            nouvelleFenetre.print();
+        }
+
+        function modifierDossier(nom, prenom) {
+            // Logique pour modifier un dossier
+            alert(`Modifier le dossier de ${nom} ${prenom}`);
+        }
+
+        function supprimerDossier(button) {
+            const row = button.closest('tr');
+            row.parentNode.removeChild(row);
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#patientStatsList tr');
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName('td');
+                const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filter));
+                row.style.display = match ? '' : 'none';
+            });
+        });
+
+        document.getElementById('printAll').addEventListener('click', function() {
+            const rows = document.querySelectorAll('#patientStatsList tr');
+            const details = Array.from(rows).map(row => {
+                return `
+                Détails du Patient:
+                Nom: ${row.cells[0].textContent}
+                Prénom: ${row.cells[1].textContent}
+                Date de Naissance: ${row.cells[2].textContent}
+                Email: ${row.cells[3].textContent}
+                Téléphone: ${row.cells[4].textContent}
+                Adresse: ${row.cells[5].textContent}
+                Sexe: ${row.cells[6].textContent}
+                Maladie: ${row.cells[7].textContent}
+                N° Sécurité Sociale: ${row.cells[8].textContent}
+                `;
+            }).join('\n');
+
+            const nouvelleFenetre = window.open('', '', 'width=600,height=400');
+            nouvelleFenetre.document.write('<pre>' + details + '</pre>');
+            nouvelleFenetre.document.close();
+            nouvelleFenetre.print();
+        });
+
+        window.onload = afficherStatistiques;
+
+          // Fonction pour afficher les statistiques
+        function afficherStatistiques() {
+            const patients = JSON.parse(localStorage.getItem('patients')) || [];
+            const totalPatients = patients.length;
+            const malePatients = patients.filter(p => p.sexe === 'Masculin').length;
+            const femalePatients = patients.filter(p => p.sexe === 'Féminin').length;
+            const otherPatients = patients.filter(p => p.sexe === 'Autre').length;
+
+            // Mise à jour des statistiques
+            document.getElementById('totalPatients').innerText = totalPatients;
+            document.getElementById('malePatients').innerText = `Masculin: ${malePatients}`;
+            document.getElementById('femalePatients').innerText = `Féminin: ${femalePatients}`;
+            document.getElementById('otherPatients').innerText = `Autre: ${otherPatients}`;
+
+            // Remplir le tableau avec les détails des patients
+            const patientStatsList = document.getElementById('patientStatsList');
+            patientStatsList.innerHTML = ""; // Réinitialiser la liste
+
+            patients.forEach(patient => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${patient.nom}</td>
+                    <td>${patient.prenom}</td>
+                    <td>${patient.dateNaissance}</td>
+                    <td>${patient.email}</td>
+                    <td>${patient.telephone}</td>
+                    <td>${patient.adresse}</td>
+                    <td>${patient.sexe}</td>
+                    <td>${patient.maladie}</td>
+                    <td>${patient.numSecu}</td>
+                    <td class="action-buttons">
+                        <button onclick="imprimerDossier('${patient.nom}', '${patient.prenom}')"><i class="fas fa-print"></i></button>
+                        <button onclick="modifierDossier('${patient.nom}', '${patient.prenom}')"><i class="fas fa-edit"></i></button>
+                        <button onclick="supprimerDossier(this)"><i class="fas fa-trash-alt"></i></button>
+                    </td>
+                `;
+                patientStatsList.appendChild(row);
+            });
+        }
+    // Appel de la fonction pour afficher les statistiques lors du chargement de la page
+    window.onload = afficherStatistiques;
+    </script>
+</script>
+</html>

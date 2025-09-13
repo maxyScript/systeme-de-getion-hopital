@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>ressource-humaine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>P<span>ersonnel</span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/doc-icon.png)"></div>
+                <h4>SGH</h4>
+                <small></small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-user-alt"></span>
+                            <small>Employe</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-envelope"></span>
+                            <small>Pharmacie</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-clipboard-list"></span>
+                            <small></small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-tasks"></span>
+                            <small>Tâches</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        <span class="las la-power-off"></span>
+                        <span>Deconnexion</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>
+            
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Accueil / Dashboard</small>
+            </div>
+            
+            <div class="page-content">
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="total-staff">0</h2>
+                            <span class="las la-user-friends"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de personnel</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="doctors-count">0</h2>
+                            <span class="las la-user-md"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre de médecins</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="nurses-count">0</h2>
+                            <span class="las la-user-nurse"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre d'infirmiers</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="paramedical-count">0</h2>
+                            <span class="las la-user-md"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre de personnel paramédical</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="records table-responsive">
+
+                    <div class="record-header">
+                        <div class="add">
+                            <span>Entries</span>
+                            <select name="" id="">
+                                <option value="">ID</option>
+                            </select>
+                            <button>Add record</button>
+                        </div>
+
+                        <div class="browse">
+                            <input type="search" placeholder="Search" class="record-search">
+                            <select name="" id="">
+                                <option value="">Status</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Contenu supplémentaire si nécessaire -->
+                    </div>
+
+                    <div class="container mt-4">
+                        <h1 class="text-center">Gestion des Ressources Humaines</h1>
+
+                        <div class="row">
+                            <!-- Colonne pour le formulaire -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Ajouter un Personnel Médical/Paramédical</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="staff-name"><i class="fas fa-user"></i> Nom et Prénoms</label>
+                                            <input type="text" class="form-control" id="staff-name" placeholder="Entrez le nom et prénoms">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="staff-role"><i class="fas fa-user-md"></i> Rôle</label>
+                                            <select class="form-control" id="staff-role">
+                                                <option>Sélectionnez...</option>
+                                                <option>Médecin</option>
+                                                <option>Infirmier</option>
+                                                <option>Paramédical</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="staff-availability"><i class="fas fa-calendar-check"></i> Disponibilité</label>
+                                            <input type="text" class="form-control" id="staff-availability" placeholder="Entrez la disponibilité">
+                                        </div>
+                                        <button class="btn btn-info" id="save-staff"><i class="fas fa-plus"></i> Ajouter Personnel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Colonne pour la liste -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Liste du Personnel Médical/Paramédical</h5>
+                                        <input type="text" id="search" class="form-control" placeholder="Rechercher...">
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nom</th>
+                                                    <th>Rôle</th>
+                                                    <th>Disponibilité</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="staff-list">
+                                                <!-- Le personnel sera ajouté ici par JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+        
+    </div>
+
+    <style>
+        /* Styles pour la mise en page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20px;
+            max-width: 1200px; /* Limite la largeur du conteneur */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color:#22baa0; /* Couleur d'arrière-plan */
+            color: #fff; /* Couleur du texte */
+            padding: 15px;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-md-6 {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const saveButton = document.getElementById("save-staff");
+            const staffList = document.getElementById("staff-list");
+            const totalStaff = document.getElementById("total-staff");
+            const doctorsCount = document.getElementById("doctors-count");
+            const nursesCount = document.getElementById("nurses-count");
+            const paramedicalCount = document.getElementById("paramedical-count");
+
+            let staffData = [];
+
+            saveButton.addEventListener("click", function() {
+                const name = document.getElementById("staff-name").value;
+                const role = document.getElementById("staff-role").value;
+                const availability = document.getElementById("staff-availability").value;
+
+                if (name && role && availability) {
+                    const staffMember = {
+                        id: staffData.length + 1,
+                        name: name,
+                        role: role,
+                        availability: availability
+                    };
+
+                    staffData.push(staffMember);
+                    updateStaffList();
+                    clearForm();
+                    updateStatistics();
+                }
+            });
+
+            function updateStaffList() {
+                staffList.innerHTML = '';
+                staffData.forEach(staff => {
+                    const row = `<tr>
+                        <td>${staff.id}</td>
+                        <td>${staff.name}</td>
+                        <td>${staff.role}</td>
+                        <td>${staff.availability}</td>
+                        <td><button class="btn btn-danger" onclick="removeStaff(${staff.id})">Supprimer</button></td>
+                    </tr>`;
+                    staffList.innerHTML += row;
+                });
+            }
+
+            function clearForm() {
+                document.getElementById("staff-name").value = '';
+                document.getElementById("staff-role").value = 'Sélectionnez...';
+                document.getElementById("staff-availability").value = '';
+            }
+
+            function updateStatistics() {
+                totalStaff.innerText = staffData.length;
+
+                const doctors = staffData.filter(s => s.role === "Médecin").length;
+                const nurses = staffData.filter(s => s.role === "Infirmier").length;
+                const paramedical = staffData.filter(s => s.role === "Paramédical").length;
+
+                doctorsCount.innerText = doctors;
+                nursesCount.innerText = nurses;
+                paramedicalCount.innerText = paramedical;
+            }
+
+            window.removeStaff = function(id) {
+                staffData = staffData.filter(staff => staff.id !== id);
+                updateStaffList();
+                updateStatistics();
+            };
+
+            const searchInput = document.getElementById("search");
+            searchInput.addEventListener("keyup", function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredStaff = staffData.filter(staff => staff.name.toLowerCase().includes(searchTerm));
+                
+                staffList.innerHTML = '';
+                filteredStaff.forEach(staff => {
+                    const row = `<tr>
+                        <td>${staff.id}</td>
+                        <td>${staff.name}</td>
+                        <td>${staff.role}</td>
+                        <td>${staff.availability}</td>
+                        <td><button class="btn btn-danger" onclick="removeStaff(${staff.id})">Supprimer</button></td>
+                    </tr>`;
+                    staffList.innerHTML += row;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

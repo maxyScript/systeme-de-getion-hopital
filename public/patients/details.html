@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la Demande</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Détails de la Demande</h1>
+
+    <div id="details-container">
+        <img id="detail-photo" class="photo" alt="Photo">
+        <h2 id="detail-name"></h2>
+        <p id="detail-email"></p>
+        <p id="detail-message"></p>
+        <p id="detail-date"></p>
+        <button onclick="goBack()">Retour</button>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back(); // Retour à la page précédente
+    }
+
+    // Récupérer les paramètres de l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const email = urlParams.get('email');
+    const message = urlParams.get('message');
+    const photo = urlParams.get('photo');
+    const date = urlParams.get('date');
+
+    // Afficher les détails
+    document.getElementById('detail-name').textContent = name;
+    document.getElementById('detail-email').textContent = email;
+    document.getElementById('detail-message').textContent = message;
+    document.getElementById('detail-date').textContent = date;
+    document.getElementById('detail-photo').src = photo;
+</script>
+<style>/* Styles pour la page de détails */
+#details-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#detail-photo {
+    width: 100px; /* Largeur de l'image */
+    height: 100px; /* Hauteur de l'image */
+    object-fit: cover; /* Ajuster l'image pour couvrir le conteneur */
+    border-radius: 50%; /* Rendre l'image ronde */
+    margin-bottom: 15px; /* Espacement en bas */
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#back-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: #0056b3;
+}</style>
+</body>
+</html>

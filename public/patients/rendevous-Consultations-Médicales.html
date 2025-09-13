@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>rendez-vous</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+<div class="side-header">
+<h3>R<span>endez-vous</span></h3>
+</div>
+
+<div class="side-content">
+<div class="profile">
+<div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+<h4>SGH</h4>
+<small></small>
+</div>
+ <div class="side-menu">
+            <ul>
+                <li>
+                    <a href="" class="active">
+                        <span class="las la-home"></span>
+                        <small>Tableau de Bord</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-user-alt"></span>
+                        <small>Profil</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-calendar"></span>
+                        <small>Consultations</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-comments"></span>
+                        <small>Messages</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-file-alt"></span>
+                        <small>Rapports</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="las la-tasks"></span>
+                        <small>Évaluations</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+
+<header>
+<div class="header-content">
+<label for="menu-toggle">
+<span class="las la-bars"></span>
+</label>
+
+<div class="header-menu">
+<label for="">
+<span class="las la-search"></span>
+</label>
+
+<div class="notify-icon">
+<span class="las la-envelope"></span>
+<span class="notify">4</span>
+</div>
+
+<div class="notify-icon">
+<span class="las la-bell"></span>
+<span class="notify">3</span>
+</div>
+
+<div class="user">
+<div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+
+<span class="las la-power-off"></span>
+<span>Déconnexion</span>
+</div>
+</div>
+</div>
+</header>
+
+<main>
+
+<div class="page-header">
+<h1>Rendevous-Médicales</h1>
+<small>Accueil / Rendez-vous</small>
+</div>
+
+<div class="page-content">
+
+<div class="analytics">
+
+<div class="card-1">
+<div class="card-head">
+<h2>107,200</h2>
+<span class="las la-user-friends"></span>
+</div>
+<div class="card-progress">
+<small>Activité des Patients ce mois-ci</small>
+<div class="card-indicator">
+<div class="indicator one" style="width: 60%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>340,230</h2>
+<span class="las la-eye"></span>
+</div>
+<div class="card-progress">
+<small>Consultations effectuées</small>
+<div class="card-indicator">
+<div class="indicator two" style="width: 80%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>653,200€</h2>
+<span class="las la-shopping-cart"></span>
+</div>
+<div class="card-progress">
+<small>Revenus mensuels</small>
+<div class="card-indicator">
+<div class="indicator three" style="width: 65%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>47,500</h2>
+<span class="las la-envelope"></span>
+</div>
+<div class="card-progress">
+<small>Nouveaux messages reçus</small>
+<div class="card-indicator">
+<div class="indicator four" style="width: 90%"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="records table-responsive">
+
+<div class="record-header">
+<div class="add">
+<span>Entrées</span>
+<select name="" id="">
+<option value="">ID</option>
+</select>
+<button id="addConsultation">Gestion des Prescriptions</button>
+</div>
+
+<div class="browse">
+<input type="search" placeholder="Rechercher" class="record-search">
+<select name="" id="">
+<option value="">Statut</option>
+</select>
+</div>
+</div>
+
+<div>
+<div class="main--content">
+    <div class="header--wrapper">
+        <div class="header--title">
+            
+        </div>
+        <div class="user--info">
+            <div class="search--box">
+                <i class="fa-solid fa-search"></i>
+                
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </div>
+
+     <div class="form-container">
+        <div class="card">
+            <h2>Ajouter un Rendez-vous</h2>
+            <div class="form-group">
+                <label for="patientName">Nom du Patient:</label>
+                <input type="text" id="patientName">
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Date du Rendez-vous:</label>
+                <input type="date" id="appointmentDate">
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Heure du Rendez-vous:</label>
+                <input type="time" id="appointmentTime">
+            </div>
+            <button id="addAppointment">Ajouter Rendez-vous</button>
+        </div>
+
+        <div class="card">
+            <h2>Détails du Rendez-vous</h2>
+            <div class="invoice-card">
+                <h2>CLINIMEDIC</h2>
+                <h3>Détails du Rendez-vous</h3>
+                <div id="appointmentDetails"></div>
+                <button id="printAppointmentButton">Imprimer Détails</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>Liste des Rendez-vous</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du Patient</th>
+                <th>Date du Rendez-vous</th>
+                <th>Heure du Rendez-vous</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentList"></tbody>
+    </table>
+</div>
+
+<script>
+    let appointments = [];
+
+    document.getElementById('addAppointment').addEventListener('click', function() {
+        const patientName = document.getElementById('patientName').value;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+
+        if (!patientName || !appointmentDate || !appointmentTime) {
+            alert("Veuillez remplir tous les champs !");
+            return;
+        }
+
+        const appointment = {
+            patient: patientName,
+            date: appointmentDate,
+            time: appointmentTime,
+        };
+
+        appointments.push(appointment);
+        updateAppointmentTable();
+        displayAppointmentDetails();
+        resetForm();
+    });
+
+    function updateAppointmentTable() {
+        const appointmentList = document.getElementById('appointmentList');
+        appointmentList.innerHTML = '';
+        appointments.forEach((appointment, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${appointment.patient}</td>
+                <td>${appointment.date}</td>
+                <td>${appointment.time}</td>
+                <td>
+                    <button class="icon" onclick="editAppointment(${index})"><i class="fa-solid fa-edit"></i></button>
+                    <button class="icon" onclick="deleteAppointment(${index})"><i class="fa-solid fa-trash"></i></button>
+                    <button class="icon" onclick="viewAppointmentDetails(${index})"><i class="fa-solid fa-info-circle"></i></button>
+                </td>
+            `;
+            appointmentList.appendChild(row);
+        });
+        if (appointments.length === 0) {
+            appointmentList.innerHTML = '<tr><td colspan="4">Aucun rendez-vous disponible.</td></tr>';
+        }
+    }
+
+    function displayAppointmentDetails() {
+        const appointmentDetails = document.getElementById('appointmentDetails');
+        appointmentDetails.innerHTML = ''; // Clear previous details
+        appointments.forEach((appointment, index) => {
+            appointmentDetails.innerHTML += `
+                <div>
+                    <strong>Rendez-vous ${index + 1}:</strong><br>
+                    Patient: ${appointment.patient}<br>
+                    Date: ${appointment.date}<br>
+                    Heure: ${appointment.time}<br>
+                    <hr>
+                </div>
+            `;
+        });
+        if (appointments.length === 0) {
+            appointmentDetails.innerHTML = '<p>Aucun rendez-vous disponible.</p>';
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('patientName').value = '';
+        document.getElementById('appointmentDate').value = '';
+        document.getElementById('appointmentTime').value = '';
+    }
+
+    function deleteAppointment(index) {
+        appointments.splice(index, 1);
+        updateAppointmentTable();
+        displayAppointmentDetails();
+    }
+
+    function editAppointment(index) {
+        const appointment = appointments[index];
+        alert(`Édition du rendez-vous pour ${appointment.patient}`);
+        // Logique pour éditer le rendez-vous
+    }
+
+    function viewAppointmentDetails(index) {
+        const appointment = appointments[index];
+        alert(`Détails du rendez-vous:\nPatient: ${appointment.patient}\nDate: ${appointment.date}\nHeure: ${appointment.time}`);
+        // Logique pour afficher les détails du rendez-vous
+    }
+
+    document.getElementById('printAppointmentButton').addEventListener('click', function() {
+        const appointmentDetails = document.getElementById('appointmentDetails').innerHTML;
+        const newWindow = window.open('', '', 'width=600,height=400');
+        newWindow.document.write('<h1>Détails du Rendez-vous</h1>');
+        newWindow.document.write(appointmentDetails);
+        newWindow.document.close();
+        newWindow.print();
+    });
+</script>
+
+<style>
+        
+        .header--wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .header--title h2 {
+            color: #28a745; /* Couleur verte pour la santé */
+        }
+        .user--info {
+            display: flex;
+            align-items: center;
+        }
+        .search--box {
+            position: relative;
+        }
+        .search--box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+    }
+    .main-content {
+        flex: 1;
+        padding: 20px;
+    }
+    h1 {
+        color: #22BAA0;
+    }
+    .form-container {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .card {
+        background-color: #e9ecef;
+        border-radius: 0px;
+        padding: 15px;
+        flex: 1 1 300px;
+    }
+    .card-1 {
+        background-color: #fff;
+        border-radius: 0px;
+        padding: 15px;
+        flex: 1 1 300px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    input, button {
+        padding: 10px;
+        width: 100%;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #22BAA0;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #22BAA0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+    .icon {
+        cursor: pointer;
+        color: #28a745;
+        margin-right: 10px;
+    }
+    .icon:hover {
+        color: #22BAA0;
+    }
+    .invoice-card {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #22BAA0;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    .invoice-card h2 {
+        color: #22BAA0;
+    }
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .invoice-card, .invoice-card * {
+            visibility: visible;
+        }
+        .invoice-card {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+   
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .icon {
+            cursor: pointer;
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .icon:hover {
+            color: #218838;
+        }
+        .invoice-card {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #28a745;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .invoice-card h2 {
+            color: #28a745;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .invoice-card, .invoice-card * {
+                visibility: visible;
+            }
+            .invoice-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+   
+</style>
+
+    </script>
+</body>
+</html>

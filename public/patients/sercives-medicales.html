@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+     <title>ressource-humaine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+  
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>P<span>ersonnel</span></h3>
+        </div>
+
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/doc-icon.png)"></div>
+                <h4>David Green</h4>
+                <small>Directeur des services médicaux</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-user-alt"></span>
+                            <small>Chirurgie</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-envelope"></span>
+                            <small>Maternite</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-clipboard-list"></span>
+                            <small>Pediatrie</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Urgences</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-tasks"></span>
+                            <small>Bloc operation</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        <span class="las la-power-off"></span>
+                        <span>Deconnexion</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Accueil / Dashboard</small>
+            </div>
+
+            <div class="page-content">
+
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="total-services">0</h2>
+                            <span class="las la-hospital-alt"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de services médicaux</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="appointments-count">0</h2>
+                            <span class="las la-calendar-check"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de rendez-vous</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="patients-count">0</h2>
+                            <span class="las la-user-injured"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de patients traités</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="staff-count">0</h2>
+                            <span class="las la-user-md"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de personnel médical</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="records table-responsive">
+
+                    <div class="record-header">
+                        <div class="add">
+                           
+                        </div>
+
+                        <div class="browse">
+
+                           
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Contenu supplémentaire si nécessaire -->
+                    </div>
+
+                    <div class="container mt-4">
+                        <h1 class="text-center">Gestion des Services Médicaux</h1>
+
+                        <div class="row">
+                            <!-- Colonne pour le formulaire -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Ajouter un Service Médical</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="service-name"><i class="fas fa-hospital"></i> Nom du Service</label>
+                                            <input type="text" id="service-name" class="form-control" placeholder="Entrez le nom du service">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="service-type"><i class="fas fa-hospital-alt"></i> Type de Service</label>
+                                            <select id="service-type" class="form-control">
+                                                <option value="">Sélectionnez...</option>
+                                                <option value="Consultation">Consultation</option>
+                                                <option value="Urgent">Urgent</option>
+                                                <option value="Chirurgie">Chirurgie</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="service-date"><i class="fas fa-calendar-check"></i> Date de Service</label>
+                                            <input type="date" id="service-date" class="form-control">
+                                        </div>
+                                        <button class="btn btn-info" id="save-service"><i class="fas fa-plus"></i> Ajouter Service</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Colonne pour la liste -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Liste des Services Médicaux</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nom du Service</th>
+                                                    <th>Type</th>
+                                                    <th>Date de Service</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="service-list">
+                                                <!-- Les services seront ajoutés ici par JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+<style>
+        /* Styles pour la mise en page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20px;
+            max-width: 1200px; /* Limite la largeur du conteneur */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #22baa0; /* Couleur d'arrière-plan */
+            color: #fff; /* Couleur du texte */
+            padding: 15px;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-md-6 {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const saveButton = document.getElementById("save-service");
+            const serviceList = document.getElementById("service-list");
+            const totalServices = document.getElementById("total-services");
+            const appointmentsCount = document.getElementById("appointments-count");
+            const patientsCount = document.getElementById("patients-count");
+            const staffCount = document.getElementById("staff-count");
+
+            let serviceData = [];
+
+            saveButton.addEventListener("click", function() {
+                const name = document.getElementById("service-name").value;
+                const type = document.getElementById("service-type").value;
+                const date = document.getElementById("service-date").value;
+
+                if (name && type && date) {
+                    const service = {
+                        id: serviceData.length + 1,
+                        name: name,
+                        type: type,
+                        date: date
+                    };
+
+                    serviceData.push(service);
+                    updateServiceList();
+                    clearForm();
+                    updateStatistics();
+                }
+            });
+
+            function updateServiceList() {
+                serviceList.innerHTML = '';
+                serviceData.forEach(service => {
+                    const row = `<tr>
+                        <td>${service.id}</td>
+                        <td>${service.name}</td>
+                        <td>${service.type}</td>
+                        <td>${service.date}</td>
+                        <td><button class="btn btn-danger">Supprimer</button></td>
+                    </tr>`;
+                
+                    serviceList.innerHTML += row;
+                });
+            }
+
+            function clearForm() {
+                document.getElementById("service-name").value = '';
+                document.getElementById("service-type").value = 'Sélectionnez...';
+                document.getElementById("service-date").value = '';
+            }
+
+            function updateStatistics() {
+                totalServices.innerText = serviceData.length;
+
+                const appointments = serviceData.filter(s => s.type === "Consultation").length;
+                const tests = serviceData.filter(s => s.type === "Urgent").length;
+                const paramedical = serviceData.filter(s => s.type === "Chirurgie").length;
+
+                appointmentsCount.innerText = appointments; // Mettre à jour avec le bon ID si besoin
+                patientsCount.innerText = tests; // Mettre à jour avec le bon ID si besoin
+                staffCount.innerText = paramedical; // Mettre à jour avec le bon ID si besoin
+            }
+
+            window.removeService = function(id) {
+                serviceData = serviceData.filter(service => service.id !== id);
+                updateServiceList();
+                updateStatistics();
+            };
+
+            const searchInput = document.getElementById("search");
+            searchInput.addEventListener("keyup", function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredServices = serviceData.filter(service => service.name.toLowerCase().includes(searchTerm));
+
+                serviceList.innerHTML = '';
+                filteredServices.forEach(service => {
+                    const row = `<tr>
+                        <td>${service.id}</td>
+                        <td>${service.name}</td>
+                        <td>${service.type}</td>
+                        <td>${service.date}</td>
+                        <td><button class="btn btn-danger">Supprimer</button></td>
+                    </tr>`;
+                    serviceList.innerHTML += row;
+                });
+            });
+        });
+  </script>
+</body>
+</html>

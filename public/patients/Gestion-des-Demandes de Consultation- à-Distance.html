@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>message</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>P<span>atients</span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/doc-icon.png)"></div>
+                <h4>SGH</h4>
+                <small></small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-user-alt"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-envelope"></span>
+                            <small>Mailbox</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-clipboard-list"></span>
+                            <small>Projects</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-tasks"></span>
+                            <small>Tasks</small>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify" ></span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        
+                        <span class="las la-power-off"></span>
+                        <span>Deconnexion</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>
+            
+            <div class="page-header">
+                <h1>Demande de consultation </h1>
+                <small>Accueil / Consultations</small>
+            </div>
+             
+            
+            <div class="page-content">
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="totalPatients">0</h2>
+                            <span class="las la-user-friends"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Message recent</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="malePatients">: 0</p>
+                            <span class="las la-bell"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Notifications</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="femalePatients">: 0</p>
+                            <span class="las la-eye"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Visiteurs</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <p id="otherPatients"></p>
+                            <span class="las la-envelope"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Messages</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <div class="page-content">
+            
+                <div class="records table-responsive">
+
+                    <div class="record-header">
+                        <div class="add">
+                            <span>Entries</span>
+                            <select name="" id="">
+                                <option value="">ID</option>
+                            </select>
+                         <button type="submit">Soumettre la demande</button>
+                        </div>
+
+                        <div class="browse">
+                           <input type="search" placeholder="Search" class="record-search">
+                            <select name="" id="">
+                                <option value="">Status</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                    <th>Photo</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Date de Demande</th>
+                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messages-table-body">
+                               <tbody id="messages-table-body">
+                <!-- Les messages seront ajoutés ici -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <script src="script.js"></script>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            
+            </div>
+            
+        </main>
+        
+    </div>
+
+    <style>
+   
+.photo {
+    width: 50px; /* Largeur de l'image */
+    height: 50px; /* Hauteur de l'image */
+    object-fit: cover; /* Ajuster l'image pour couvrir le conteneur */
+    border-radius: 50%; /* Rendre l'image ronde */}
+    </style>
+</body>
+
+<script>
+// Fonction pour charger les messages du stockage local
+function loadMessages() {
+    const messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.forEach((msg, index) => {
+        const newRow = document.createElement('tr');
+        
+        const messagePreview = msg.message.length > 8 ? msg.message.substring(0, 8) + '...' : msg.message;
+
+        newRow.innerHTML = `
+            <td>#${index + 1}</td>
+            <td><img src="${msg.photo}" class="photo" alt="Photo de ${msg.name}" /></td>
+            <td>${msg.name}</td>
+            <td>${msg.email}</td>
+            <td>
+                <div class="message-preview">${messagePreview}</div>
+            </td>
+               <td>${new Date().toLocaleDateString('fr-FR')}</td>
+            <td class="actions">
+                <span class="details" title="Détails" onclick="viewDetails('${msg.name}', '${msg.email}', '${msg.message}', '${msg.photo}', '${msg.date}')"><i class="fas fa-info-circle"></i></span>
+                <span class="delete" title="Supprimer le message" onclick="deleteMessage(${index})"><i class="fas fa-trash-alt"></i></span>
+            </td>
+        `;
+        document.getElementById('messages-table-body').appendChild(newRow);
+    });
+}
+
+// Fonction pour voir les détails d'un message
+function viewDetails(name, email, message, photo, date) {
+    window.location.href = `details.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}&photo=${encodeURIComponent(photo)}&date=${encodeURIComponent(date)}`;
+}
+
+// Fonction pour supprimer un message
+function deleteMessage(index) {
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.splice(index, 1); // Supprime le message à l'index donné
+    localStorage.setItem('messages', JSON.stringify(messages)); // Met à jour le stockage local
+    document.getElementById('messages-table-body').innerHTML = ''; // Vide le tableau
+    loadMessages(); // Recharge les messages
+}
+
+// Charger les messages lorsque la page est chargée
+window.onload = loadMessages;
+
+
+// Fonction pour charger les messages du stockage local
+function loadMessages() {
+    const messages = JSON.parse(localStorage.getItem('messages')) || [];
+    const messagesTableBody = document.getElementById('messages-table-body');
+    messagesTableBody.innerHTML = ''; // Vider le tableau avant de le remplir
+
+    messages.forEach((msg, index) => {
+        const newRow = document.createElement('tr');
+        const messagePreview = msg.message.length > 8 ? msg.message.substring(0, 8) + '...' : msg.message;
+
+        newRow.innerHTML = `
+            <td>#${index + 1}</td>
+            <td><img src="${msg.photo}" class="photo" alt="Photo de ${msg.name}" /></td>
+            <td>${msg.name}</td>
+            <td>${msg.email}</td>
+            <td>
+                <div class="message-preview">${messagePreview}</div>
+            </td>
+            <td>${new Date(msg.date).toLocaleDateString('fr-FR')}</td>
+            <td class="actions">
+                <span class="details" title="Détails" onclick="viewDetails('${msg.name}', '${msg.email}', '${msg.message}', '${msg.photo}', '${msg.date}')"><i class="fas fa-info-circle"></i></span>
+                <span class="delete" title="Supprimer le message" onclick="deleteMessage(${index})"><i class="fas fa-trash-alt"></i></span>
+            </td>
+        `;
+        messagesTableBody.appendChild(newRow);
+    });
+
+    // Mettre à jour le compteur de messages
+    document.getElementById('totalPatients').innerText = messages.length;
+}
+
+// Fonction de recherche
+function searchMessages() {
+    const searchInput = document.querySelector('.record-search').value.toLowerCase();
+    const messages = JSON.parse(localStorage.getItem('messages')) || [];
+    
+    const filteredMessages = messages.filter(msg => 
+        msg.name.toLowerCase().includes(searchInput) || 
+        msg.email.toLowerCase().includes(searchInput) || 
+        msg.message.toLowerCase().includes(searchInput)
+    );
+
+    const messagesTableBody = document.getElementById('messages-table-body');
+    messagesTableBody.innerHTML = ''; // Vider le tableau avant de le remplir
+
+    filteredMessages.forEach((msg, index) => {
+        const newRow = document.createElement('tr');
+        const messagePreview = msg.message.length > 8 ? msg.message.substring(0, 8) + '...' : msg.message;
+
+        newRow.innerHTML = `
+            <td>#${index + 1}</td>
+            <td><img src="${msg.photo}" class="photo" alt="Photo de ${msg.name}" /></td>
+            <td>${msg.name}</td>
+            <td>${msg.email}</td>
+            <td>
+                <div class="message-preview">${messagePreview}</div>
+            </td>
+            <td>${new Date(msg.date).toLocaleDateString('fr-FR')}</td>
+            <td class="actions">
+                <span class="details" title="Détails" onclick="viewDetails('${msg.name}', '${msg.email}', '${msg.message}', '${msg.photo}', '${msg.date}')"><i class="fas fa-info-circle"></i></span>
+                <span class="delete" title="Supprimer le message" onclick="deleteMessage(${index})"><i class="fas fa-trash-alt"></i></span>
+            </td>
+        `;
+        messagesTableBody.appendChild(newRow);
+    });
+
+    // Mettre à jour le compteur de messages
+    document.getElementById('totalPatients').innerText = filteredMessages.length;
+}
+
+// Ajouter un écouteur d'événements à la barre de recherche
+document.querySelector('.record-search').addEventListener('input', searchMessages);
+
+// Charger les messages lorsque la page est chargée
+window.onload = loadMessages;
+
+
+
+</script>
+</html>

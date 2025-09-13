@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>prescription</title>
+<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+<div class="side-header">
+<h3>P<span>escription</span></h3>
+</div>
+
+<div class="side-content">
+<div class="profile">
+<div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+<h4>SGH</h4>
+<small></small>
+</div>
+
+<div class="side-menu">
+<ul>
+<li>
+<a href="" class="active">
+<span class="las la-home"></span>
+<small>Tableau de Bord</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-user-alt"></span>
+<small>Profil</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-calendar"></span>
+<small>Consultations</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-comments"></span>
+<small>Messages</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-file-alt"></span>
+<small>Rapports</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-tasks"></span>
+<small>Évaluations</small>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="main-content">
+
+<header>
+<div class="header-content">
+<label for="menu-toggle">
+<span class="las la-bars"></span>
+</label>
+
+<div class="header-menu">
+<label for="">
+<span class="las la-search"></span>
+</label>
+
+<div class="notify-icon">
+<span class="las la-envelope"></span>
+<span class="notify">4</span>
+</div>
+
+<div class="notify-icon">
+<span class="las la-bell"></span>
+<span class="notify">3</span>
+</div>
+
+<div class="user">
+<div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+
+<span class="las la-power-off"></span>
+<span>Déconnexion</span>
+</div>
+</div>
+</div>
+</header>
+
+<main>
+
+<div class="page-header">
+<h1>Prescription Médicales</h1>
+<small>Accueil / Consultations</small>
+</div>
+
+<div class="page-content">
+
+ <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>140</h2>
+                            <span class="fa-solid fa-dollar-sign"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Paiements</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>34</h2>
+                            <span class="fa-solid fa-briefcase-medical"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Stocks</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>200</h2>
+                            <span class="fa-solid fa-hand-holding-dollar"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Vente</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>3</h2>
+                            <span class="las la-laptop-medical"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Administrateurs</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+<div class="records table-responsive">
+
+<div class="record-header">
+<div class="add">
+<span>Entrées</span>
+<select name="" id="">
+<option value="">ID</option>
+</select>
+<button id="addConsultation">Gestion des Prescriptions</button>
+</div>
+
+<div class="browse">
+<input type="search" placeholder="Rechercher" class="record-search">
+<select name="" id="">
+<option value="">Statut</option>
+</select>
+</div>
+</div>
+
+<div>
+ <div class="container">
+        <div class="statistics-card">
+         
+        </div>
+        <div class="form-container">
+            <div class="card">
+                <h2>Détails de l'Employé Médical</h2>
+                <div class="form-group">
+                    <label for="employeName">Nom de l'Employé Médical:</label>
+                    <input type="text" id="employeName" required>
+                </div>
+                <div class="form-group">
+                    <label for="specialite">Spécialité:</label>
+                    <select id="specialite">
+                        <option value="">Sélectionnez une spécialité</option>
+                        <option value="generaliste">Médecin Généraliste</option>
+                        <option value="cardiologue">Cardiologue</option>
+                        <option value="dermatologue">Dermatologue</option>
+                        <option value="pediatre">Pédiatre</option>
+                        <option value="orthopediste">Orthopédiste</option>
+                        <option value="neurologue">Neurologue</option>
+                        <option value="gynecologue">Gynécologue</option>
+                        <option value="psychiatre">Infirmière</option>
+                        <option value="pharmacien">Pharmacien</option>
+                        <option value="technicien">Technicien Médical</option>
+                        <option value="radiologue">Informaticien</option>
+                        <option value="infirmier">Infirmier</option>
+                        <option value="aideSoignant">Aide-Soignant</option>
+                        <option value="kinésithérapeute">Kinésithérapeute</option>
+                        <option value="nutritionniste">Nutritionniste</option>
+                        <option value="opticien">Opticien</option>
+                        <option value="audioprothesiste">Audioprothésiste</option>
+                        <option value="logopede">Logopède</option>
+                        <option value="ergotherapeute">Ergothérapeute</option>
+                        <option value="psychologue">Psychologue</option>
+                        <option value="sagesseFemme">Sage-Femme</option>
+                        <option value="ambulancier">Ambulancier</option>
+                        <option value="phlebotomiste">Phlébotomiste</option>
+                        <option value="optometrist">Optométriste</option>
+                        <option value="diététicien">Diététicien</option>
+                        <option value="audiologiste">Audiologiste</option>
+                        <option value="technologueMedical">Technologue Médical</option>
+                        <option value="physiotherapeute">Physiothérapeute</option>
+                        <option value="orthophoniste">Orthophoniste</option>
+                        <option value="inhalotherapeute">Inhalothérapeute</option>
+                        <option value="technicienRadiologie">Technicien en Radiologie</option>
+                        <option value="technicienLaboratoire">Technicien de Laboratoire</option>
+                        <option value="pharmacienHospitalier">Pharmacien Hospitalier</option>
+                        <option value="laborantin">Laborantin</option>
+                        <option value="anesthesiste">Anesthésiste</option>
+                        <option value="dentiste">Dentiste</option>
+                        <option value="ophtalmologue">Ophtalmologue</option>
+                        <option value="urologue">Urologue</option>
+                        <option value="psychiatre">Psychiatre</option>
+                        <option value="endocrinologue">Endocrinologue</option>
+                        <option value="gastroenterologue">Gastro-entérologue</option>
+                        <option value="pneumologue">Pneumologue</option>
+                        <option value="rhumatologue">Rhumatologue</option>
+                        <option value="nephrologue">Néphrologue</option>
+                        <option value="hematologue">Hématologue</option>
+                        <option value="chirurgien">Chirurgien</option>
+                        <option value="anesthesiste">Anesthésiste</option>
+                        <option value="radiologue">Radiologue</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexe">Sexe:</label>
+                    <select id="sexe">
+                        <option value="">Sélectionnez le sexe</option>
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateEmbauche">Date d'Embauche:</label>
+                    <input type="date" id="dateEmbauche" required>
+                </div>
+                <div class="form-group">
+                    <label for="commentaire">Commentaire:</label>
+                    <textarea id="commentaire" rows="4"></textarea>
+                </div>
+                <button id="ajouterEmploye">Ajouter Employé Médical</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="card">
+                <h2>Liste des Employés Médicaux</h2>
+                <table id="employeTable">
+                    <thead>
+                        <div id="fichePaiement">
+                         <p id="totalEmployes">Total des Employés : 0</p>
+                         <p id="totalFemmes">Total des Femmes: 0</p>
+                         <p id="totalHommes">Total des Hommes: 0</p>
+                         <p id="totalAutres">Total des Autres: 0</p>
+                    </div>
+
+                        <tr>
+                            <th>Nom de l'Employé Médical</th>
+                            <th>Sexe</th>
+                            <th>Spécialité</th>
+                            <th>Date d'Embauche</th>
+                            <th>Commentaire</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeList"></tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('ajouterEmploye').addEventListener('click', function() {
+        const employeName = document.getElementById('employeName').value;
+        const sexe = document.getElementById('sexe').value;
+        if (!employeName || !sexe) {
+            alert("Veuillez remplir tous les champs obligatoires.");
+            return;
+        }
+        if (!document.getElementById('specialite').value) {
+            alert("Veuillez sélectionner une spécialité.");
+            return;
+        }
+        if (!document.getElementById('dateEmbauche').value) {
+            alert("Veuillez sélectionner une date d'embauche.");
+            return;
+        }
+        if (!document.getElementById('commentaire').value) {
+            alert("Veuillez ajouter un commentaire.");
+            return;
+        }
+        const specialite = document.getElementById('specialite').value;
+        const dateEmbauche = document.getElementById('dateEmbauche').value;
+        const commentaire = document.getElementById('commentaire').value;
+
+        const employe = {
+            employeName,
+            sexe,
+            specialite,
+            dateEmbauche,
+            commentaire
+        };
+
+        let employes = JSON.parse(localStorage.getItem('employes')) || [];
+        employes.push(employe);
+        localStorage.setItem('employes', JSON.stringify(employes));
+
+        ajouterEmployeAuTableau(employe);
+        mettreAJourStatistiques();
+        document.querySelectorAll('input, textarea').forEach(input => input.value = '');
+        document.getElementById('specialite').selectedIndex = 0; // Réinitialiser le select
+    });
+
+    function ajouterEmployeAuTableau(employe) {
+        const employeList = document.getElementById('employeList');
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${employe.employeName}</td>
+            <td>${employe.sexe}</td>
+            <td>${employe.specialite}</td>
+            <td>${employe.dateEmbauche}</td>
+            <td>${employe.commentaire}</td>
+            <td>
+                <button onclick="modifierEmploye(this)">Modifier</button>
+                <button onclick="supprimerEmploye(this)">Supprimer</button>
+            </td>
+        `;
+        employeList.appendChild(row);
+    }
+
+    function modifierEmploye(button) {
+        const row = button.parentElement.parentElement;
+        const cells = row.getElementsByTagName("td");
+
+        document.getElementById('employeName').value = cells[0].innerText;
+        document.getElementById('specialite').value = cells[1].innerText;
+        document.getElementById('dateEmbauche').value = cells[2].innerText;
+        document.getElementById('commentaire').value = cells[3].innerText;
+
+        row.parentElement.removeChild(row);
+        mettreAJourStatistiques(); // Mettre à jour les statistiques après modification
+    }
+
+    function supprimerEmploye(button) {
+        const row = button.parentElement.parentElement;
+        row.parentElement.removeChild(row);
+        mettreAJourStatistiques(); // Mettre à jour les statistiques après suppression
+    }
+
+    function afficherEmployes() {
+        const employeList = document.getElementById('employeList');
+        const employes = JSON.parse(localStorage.getItem('employes')) || [];
+        employeList.innerHTML = "";
+
+        employes.forEach(employe => {
+            ajouterEmployeAuTableau(employe);
+        });
+        mettreAJourStatistiques(); // Mettre à jour les statistiques à l'affichage
+    }
+
+    function mettreAJourStatistiques() {
+        const employes = JSON.parse(localStorage.getItem('employes')) || [];
+        document.getElementById('totalEmployes').innerText = `Total des Employés : ${employes.length}`;
+    const totalFemmes = employes.filter(employe => employe.sexe === 'Femme').length;
+    document.getElementById('totalFemmes').innerText = `Total des Femmes:${totalFemmes}`;
+    const totalHommes = employes.filter(employe => employe.sexe === 'Homme').length;
+    document.getElementById('totalHommes').innerText = `Total des Hommes:${totalHommes}`;
+    const totalAutres = employes.filter(employe => employe.sexe === 'Autre').length;
+    document.getElementById('totalAutres').innerText = `Total des Autres:${totalAutres}`;
+
+    }
+
+    // Barre de recherche
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const employeList = document.getElementById('employeList');
+        const rows = employeList.getElementsByTagName('tr');
+
+        Array.from(rows).forEach(row => {
+            const employeName = row.cells[0].innerText.toLowerCase();
+            row.style.display = employeName.includes(searchTerm) ? '' : 'none';
+        });
+    });
+
+    afficherEmployes();
+</script>
+   
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container, .table-container {
+            padding: 20px;
+        }
+
+        .form-container {
+            flex: 1;
+            margin-right: 20px;
+           
+            border-radius: 10px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .table-container {
+            flex: 2;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+
+        #fichePaiement {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #ffffff;
+            color: #218838;
+        }
+
+
+
+.logo{
+
+    height: 80px;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+</style>
+</body>
+</html>

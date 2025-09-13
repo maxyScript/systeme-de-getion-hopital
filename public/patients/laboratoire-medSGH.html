@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>ressource-humaine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+    <div class="sidebar">
+        <div class="side-header">
+            <h3>P<span>ersonnel</span></h3>
+        </div>
+        
+        <div class="side-content">
+            <div class="profile">
+                <div class="profile-img bg-img" style="background-image: url(img/3.jpeg)"></div>
+                <h4>David Green</h4>
+                <small>Directeur des ressources humaines</small>
+            </div>
+
+            <div class="side-menu">
+                <ul>
+                    <li>
+                       <a href="" class="active">
+                            <span class="las la-home"></span>
+                            <small>Dashboard</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-user-alt"></span>
+                            <small>Profile</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-envelope"></span>
+                            <small>Mailbox</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-clipboard-list"></span>
+                            <small>Projects</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Orders</small>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="">
+                            <span class="las la-tasks"></span>
+                            <small>Tâches</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="header-content">
+                <label for="menu-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                
+                <div class="header-menu">
+                    <label for="">
+                        <span class="las la-search"></span>
+                    </label>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-envelope"></span>
+                        <span class="notify">4</span>
+                    </div>
+                    
+                    <div class="notify-icon">
+                        <span class="las la-bell"></span>
+                        <span class="notify">3</span>
+                    </div>
+                    
+                    <div class="user">
+                        <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                        <span class="las la-power-off"></span>
+                        <span>Deconnexion</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <main>
+            
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <small>Accueil / Dashboard</small>
+            </div>
+            
+            <div class="page-content">
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="total-samples">0</h2>
+                            <span class="las la-flask"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total d'échantillons analysés</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="tests-count">0</h2>
+                            <span class="las la-vials"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de tests effectués</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="patients-count">0</h2>
+                            <span class="las la-user-injured"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de patients traités</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2 id="staff-count">0</h2>
+                            <span class="las la-user-md"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Nombre total de personnel médical</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="records table-responsive">
+
+                    <div class="record-header">
+                        <div class="add">
+                            <span>Entries</span>
+                            <select name="" id="">
+                                <option value="">ID</option>
+                            </select>
+                            <button>Add record</button>
+                        </div>
+
+                        <div class="browse">
+                            <input type="search" placeholder="Rechercher" class="record-search">
+                            <select name="" id="">
+                                <option value="">Status</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Contenu supplémentaire si nécessaire -->
+                    </div>
+
+                    <div class="container mt-4">
+                        <h1 class="text-center">Gestion des Échantillons de Laboratoire</h1>
+
+                        <div class="row">
+                            <!-- Colonne pour le formulaire -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Ajouter un Échantillon</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="sample-name"><i class="fas fa-flask"></i> Nom de l'Échantillon</label>
+                                            <input type="text" class="form-control" id="sample-name" placeholder="Entrez le nom de l'échantillon">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sample-type"><i class="fas fa-vial"></i> Type d'Échantillon</label>
+                                            <select class="form-control" id="sample-type">
+                                                <option>Sélectionnez...</option>
+                                                <option>Sang</option>
+                                                <option>Urine</option>
+                                                <option>Salive</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sample-date"><i class="fas fa-calendar-check"></i> Date d'Analyse</label>
+                                            <input type="date" class="form-control" id="sample-date">
+                                        </div>
+                                        <button class="btn btn-danger" id="save-sample"><i class="fas fa-plus"></i> Ajouter Échantillon</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Colonne pour la liste -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>Liste des Échantillons</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nom de l'Échantillon</th>
+                                                    <th>Type</th>
+                                                    <th>Date d'Analyse</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="sample-list">
+                                                <!-- Les échantillons seront ajoutés ici par JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+        
+    </div>
+
+    <style>
+        /* Styles pour la mise en page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20px;
+            max-width: 1200px; /* Limite la largeur du conteneur */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff; /* Couleur d'arrière-plan */
+            color: #fff; /* Couleur du texte */
+            padding: 15px;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-md-6 {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const saveButton = document.getElementById("save-sample");
+            const sampleList = document.getElementById("sample-list");
+            const totalSamples = document.getElementById("total-samples");
+            const testsCount = document.getElementById("tests-count");
+            const patientsCount = document.getElementById("patients-count");
+            const staffCount = document.getElementById("staff-count");
+
+            let sampleData = [];
+
+            saveButton.addEventListener("click", function() {
+                const name = document.getElementById("sample-name").value;
+                const type = document.getElementById("sample-type").value;
+                const date = document.getElementById("sample-date").value;
+
+                if (name && type && date) {
+                    const sample = {
+                        id: sampleData.length + 1,
+                        name: name,
+                        type: type,
+                        date: date
+                    };
+
+                    sampleData.push(sample);
+                    updateSampleList();
+                    clearForm();
+                    updateStatistics();
+                }
+            });
+
+            function updateSampleList() {
+                sampleList.innerHTML = '';
+                sampleData.forEach(sample => {
+                    const row = `<tr>
+                        <td>${sample.id}</td>
+                        <td>${sample.name}</td>
+                        <td>${sample.type}</td>
+                        <td>${sample.date}</td>
+                        <td><button class="btn btn-danger" onclick="removeSample(${sample.id})">Supprimer</button></td>
+                    </tr>`;
+                    sampleList.innerHTML += row;
+                });
+            }
+
+            function clearForm() {
+                document.getElementById("sample-name").value = '';
+                document.getElementById("sample-type").value = 'Sélectionnez...';
+                document.getElementById("sample-date").value = '';
+            }
+
+            function updateStatistics() {
+                totalSamples.innerText = sampleData.length;
+
+                // Mettez à jour les autres statistiques comme nécessaire
+                testsCount.innerText = 0; // Mettre à jour selon les besoins
+                patientsCount.innerText = 0; // Mettre à jour selon les besoins
+                staffCount.innerText = 0; // Mettre à jour selon les besoins
+            }
+
+            window.removeSample = function(id) {
+                sampleData = sampleData.filter(sample => sample.id !== id);
+                updateSampleList();
+                updateStatistics();
+            };
+
+            const searchInput = document.querySelector(".record-search");
+            searchInput.addEventListener("keyup", function() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredSamples = sampleData.filter(sample => sample.name.toLowerCase().includes(searchTerm));
+                
+                sampleList.innerHTML = '';
+                filteredSamples.forEach(sample => {
+                    const row = `<tr>
+                        <td>${sample.id}</td>
+                        <td>${sample.name}</td>
+                        <td>${sample.type}</td>
+                        <td>${sample.date}</td>
+                        <td><button class="btn btn-danger" onclick="removeSample(${sample.id})">Supprimer</button></td>
+                    </tr>`;
+                    sampleList.innerHTML += row;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

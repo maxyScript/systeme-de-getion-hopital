@@ -1,0 +1,76 @@
+<body class="welcome">
+    <span id="splash-overlay" class="splash"></span>
+    <span id="welcome" class="z-depth-4"></span>
+   
+    <header class="navbar-fixed"> 
+      <nav class="row deep-purple darken-3">
+        <div class="col s12">
+          
+        </div>
+      </nav>
+      <link rel="stylesheet" href="style-doc.css">
+    </header>
+  
+    <main class="valign-wrapper">
+      <span class="container grey-text text-lighten-1 ">
+  
+        <p class="flow-text"> </p>
+       
+        <h1 class="title grey-text text-lighten-3">SGH-CLINIMEDIC 1.0</h1>
+        
+                 <h2 class="so"></h2>
+<div class="center-align">
+          <!-- Dropdown Trigger -->
+    <div class="card1">
+      
+      <div class="box">  
+        <img src="img/doc-icon.png"width="160"> 
+        <form action id="loginForm">
+         <label for="country">Utilisateur</label>
+         <select id="user"id="user" required >
+        <option value="admin">Admin</option>
+        <option value="secretaire">Secretaire</option>
+        <option value="superviseur">Superviseur</option>
+      </select>
+      <input type="email" id="email" name="email" placeholder="Entre vorte email..">
+      <input type="password" id="password" name="password" placeholder="Entre votre mot de passe..">
+      <input type="submit" value="Se connecter">
+    </form>
+
+    <p id="message"></p>
+     </div></div></div>
+          <!-- Dropdown Structure -->
+        <script src="script.js"></script>  
+    </main> 
+   <footer class="page-footer deep-purple darken-3">
+      <div class="footer-copyright deep-purple darken-4">
+        <div class="container">
+          <time datetime="{{ site.time | date: '%Y' }}">&copy;UBTECH-SYSTEME DE GESTION ECOLE |Developeur Ing Corasmin Josue Maxy Christophila| Copyright ©2022|Tous les droits sont reserves.
+            </time>
+        </div>
+      </div>
+    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const user = document.getElementById('user').value;
+              const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+            if (email === "corasminjosuemax@gmail.com" && password === "1234max" && user === "admin" ||user === "secretaire" || user === "superviseur" ) {
+                message.textContent = 'Connexion réussie !';
+                message.style.color = 'green';
+                // Redirection to dashboard or another page can be added here
+                window.location.href = 'user-multiple.html'; // Example redirection
+
+            } else {
+                message.textContent = 'Identifiants incorrects. Veuillez réessayer.';
+                message.style.color = 'red';
+            }
+        });
+    </script>
+           
+  </body>
+</div><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		

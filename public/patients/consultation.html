@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>consultation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+    <div class="side-header">
+        <h3>C<span>onsulations</span></h3>
+    </div>
+
+    <div class="side-content">
+        <div class="profile">
+            <div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+            <h4>SGH</h4>
+            <small></small>
+        </div>
+
+        <div class="side-menu">
+            <ul>
+                <li>
+                    <a href="" class="active">
+                        <span class="las la-home"></span>
+                        <small>Dashboard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="ajouter-un-patients.html">
+                        <span class="fa-solid fa-bed"></span>
+                        <small>Gestion des patients</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="consultation.html">
+                        <span class="fa-solid fa-mortar-pestle"></span>
+                        <small>Consulations</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="ressource-humaines-stat.html">
+                        <span class="fa-solid fa-user-tie"></span>
+                        <small>Prescriptions</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="resultat-d'examen.html">
+                        <span class="fa-solid fa-money-check-dollar"></span>
+                        <small>Resultat</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="examen-laboratoire.html">
+                        <span class="fa-solid fa-pump-medical"></span>
+                        <small>Examen</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+
+    <header>
+        <div class="header-content">
+            <label for="menu-toggle">
+                <span class="las la-bars"></span>
+            </label>
+
+            <div class="header-menu">
+                <label for="">
+                    <span class="las la-search"></span>
+                </label>
+
+                <div class="notify-icon">
+                    <span class="las la-envelope"></span>
+                    <span class="notify">4</span>
+                </div>
+
+                <div class="notify-icon">
+                    <span class="las la-bell"></span>
+                    <span class="notify">3</span>
+                </div>
+
+                <div class="user">
+                    <div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+                    <span class="las la-power-off"></span>
+                    <span>Déconnexion</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Consulations</h1>
+            <small>Accueil / Dashboard</small>
+        </div>
+
+        <div class="page-content">
+            
+            
+                <div class="analytics">
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>10</h2>
+                            <span class="las la-user-friends"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Utilisateurs</small>
+                            <div class="card-indicator">
+                                <div class="indicator one" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>340</h2>
+                            <span class="fa-solid fa-bed"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Patients</small>
+                            <div class="card-indicator">
+                                <div class="indicator two" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>40</h2>
+                            <span class="fa-solid fa-user-doctor"></span>
+                        </div>
+                        <div class="card-progress">
+                            <small>Medecins</small>
+                            <div class="card-indicator">
+                                <div class="indicator three" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-head">
+                            <h2>23</h2>
+                            <span class="fa-solid fa-mortar-pestle">
+                        </div>
+                        <div class="card-progress">
+                            <small>Pharmacie</small>
+                            <div class="card-indicator">
+                                <div class="indicator four" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <div class="container mt-4">
+                <div class="row">
+                    <!-- Colonne pour le formulaire -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>Ajouter un Patient</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="patient-name"><i class="fas fa-user"></i> Nom et Prénoms</label>
+                                    <input type="text" class="form-control" id="patient-name" placeholder="Entrez le nom et prénoms">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-age"><i class="fas fa-calendar-alt"></i> Âge</label>
+                                    <input type="number" class="form-control" id="patient-age" placeholder="Entrez l'âge">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-gender"><i class="fas fa-venus-mars"></i> Sexe</label>
+                                    <select class="form-control" id="patient-gender">
+                                        <option>Sélectionnez...</option>
+                                        <option>Homme</option>
+                                        <option>Femme</option>
+                                        <option>Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-condition"><i class="fas fa-notes-medical"></i> État</label>
+                                    <select class="form-control" id="patient-condition">
+                                        <option>Sélectionnez...</option>
+                                        <option>Critique</option>
+                                        <option>Urgent</option>
+                                        <option>Non urgent</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-arrival"><i class="fas fa-clock"></i> Heure d'Arrivée</label>
+                                    <input type="text" class="form-control" id="patient-arrival" placeholder="Entrez l'heure d'arrivée">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-address"><i class="fas fa-home"></i> Adresse</label>
+                                    <input type="text" class="form-control" id="patient-address" placeholder="Entrez l'adresse">
+                                </div>
+                                <div class="form-group">
+                                    <label for="patient-phone"><i class="fas fa-phone"></i> Numéro de Téléphone</label>
+                                    <input type="text" class="form-control" id="patient-phone" placeholder="Entrez le numéro de téléphone">
+                                </div>
+                                <button class="btn btn-info" id="save-patient"><i class="fas fa-plus"></i> Ajouter Patient</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne pour la liste -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5>Liste des Patients</h5>
+                                <input type="text" id="search" class="form-control" placeholder="Rechercher...">
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nom</th>
+                                            <th>Âge</th>
+                                            <th>État</th>
+                                            <th>Heure d'Arrivée</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="patient-list">
+                                        <!-- Les patients seront ajoutés ici par JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        /* Styles pour la mise en page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20px;
+            max-width: 100%; /* Limite la largeur du conteneur */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color:#22BAA0; /* Couleur d'arrière-plan pour les urgences */
+            color: #fff; /* Couleur du texte */
+            padding: 15px;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /* Media query pour les petits écrans */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            .col-md-6 {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        let patientRecords = JSON.parse(localStorage.getItem('patientRecords')) || [];
+
+        document.getElementById('save-patient').addEventListener('click', function() {
+            const patient = {
+                id: Date.now(),
+                name: document.getElementById('patient-name').value,
+                age: document.getElementById('patient-age').value,
+                gender: document.getElementById('patient-gender').value,
+                condition: document.getElementById('patient-condition').value,
+                arrival: document.getElementById('patient-arrival').value,
+                address: document.getElementById('patient-address').value,
+                phone: document.getElementById('patient-phone').value,
+            };
+
+            patientRecords.push(patient);
+            localStorage.setItem('patientRecords', JSON.stringify(patientRecords));
+            addPatientToList(patient);
+            resetForm();
+        });
+
+        function addPatientToList(patient) {
+            const patientList = document.getElementById('patient-list');
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${patient.id}</td>
+                <td>${patient.name}</td>
+                <td>${patient.age}</td>
+                <td>${patient.condition}</td>
+                <td>${patient.arrival}</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-info btn-details" title="Détails"><i class="fas fa-info-circle"></i></button>
+                        <button class="btn btn-warning btn-edit" title="Modifier"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-delete" title="Supprimer"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </td>
+            `;
+            patientList.appendChild(row);
+
+            row.querySelector('.btn-delete').addEventListener('click', () => deletePatient(patient.id));
+            row.querySelector('.btn-edit').addEventListener('click', () => editPatient(patient.id));
+            row.querySelector('.btn-details').addEventListener('click', () => showDetails(patient.id));
+        }
+
+        function deletePatient(id) {
+            patientRecords = patientRecords.filter(patient => patient.id !== id);
+            localStorage.setItem('patientRecords', JSON.stringify(patientRecords));
+            renderPatientList();
+        }
+
+        function editPatient(id) {
+            const patient = patientRecords.find(patient => patient.id === id);
+            document.getElementById('patient-name').value = patient.name;
+            document.getElementById('patient-age').value = patient.age;
+            document.getElementById('patient-gender').value = patient.gender;
+            document.getElementById('patient-condition').value = patient.condition;
+            document.getElementById('patient-arrival').value = patient.arrival;
+            document.getElementById('patient-address').value = patient.address;
+            document.getElementById('patient-phone').value = patient.phone;
+        }
+
+        function showDetails(id) {
+            const patient = patientRecords.find(patient => patient.id === id);
+            alert(`Détails du Patient:\n\nNom: ${patient.name}\nÂge: ${patient.age}\nSexe: ${patient.gender}\nÉtat: ${patient.condition}\nHeure d'Arrivée: ${patient.arrival}\nAdresse: ${patient.address}\nTéléphone: ${patient.phone}`);
+        }
+
+        function renderPatientList() {
+            const patientList = document.getElementById('patient-list');
+            patientList.innerHTML = "";
+            patientRecords.forEach(patient => {
+                addPatientToList(patient);
+            });
+        }
+
+        // Fonction de recherche
+        document.getElementById('search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const filteredPatients = patientRecords.filter(patient =>
+                patient.name.toLowerCase().includes(searchTerm) ||
+                patient.condition.toLowerCase().includes(searchTerm)
+            );
+            const patientList = document.getElementById('patient-list');
+            patientList.innerHTML = "";
+            filteredPatients.forEach(patient => {
+                addPatientToList(patient);
+            });
+        });
+
+        function resetForm() {
+            document.getElementById('patient-name').value = '';
+            document.getElementById('patient-age').value = '';
+            document.getElementById('patient-gender').value = '';
+            document.getElementById('patient-condition').value = '';
+            document.getElementById('patient-arrival').value = '';
+            document.getElementById('patient-address').value = '';
+            document.getElementById('patient-phone').value = '';
+        }
+
+        // Initialiser la liste des patients au chargement de la page
+        renderPatientList();
+    </script>
+</div>
+</body>
+</html>

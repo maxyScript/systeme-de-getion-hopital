@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>prescription</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+<input type="checkbox" id="menu-toggle">
+<div class="sidebar">
+<div class="side-header">
+<h3>P<span>escription</span></h3>
+</div>
+
+<div class="side-content">
+<div class="profile">
+<div class="profile-img bg-img" style="background-image: url(img/22.png)"></div>
+<h4>SGH</h4>
+<small></small>
+</div>
+
+<div class="side-menu">
+<ul>
+<li>
+<a href="" class="active">
+<span class="las la-home"></span>
+<small>Tableau de Bord</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-user-alt"></span>
+<small>Profil</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-calendar"></span>
+<small>Consultations</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-comments"></span>
+<small>Messages</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-file-alt"></span>
+<small>Rapports</small>
+</a>
+</li>
+<li>
+<a href="">
+<span class="las la-tasks"></span>
+<small>Évaluations</small>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="main-content">
+
+<header>
+<div class="header-content">
+<label for="menu-toggle">
+<span class="las la-bars"></span>
+</label>
+
+<div class="header-menu">
+<label for="">
+<span class="las la-search"></span>
+</label>
+
+<div class="notify-icon">
+<span class="las la-envelope"></span>
+<span class="notify">4</span>
+</div>
+
+<div class="notify-icon">
+<span class="las la-bell"></span>
+<span class="notify">3</span>
+</div>
+
+<div class="user">
+<div class="bg-img" style="background-image: url(img/1.jpeg)"></div>
+
+<span class="las la-power-off"></span>
+<span>Déconnexion</span>
+</div>
+</div>
+</div>
+</header>
+
+<main>
+
+<div class="page-header">
+<h1>Prescription Médicales</h1>
+<small>Accueil / Consultations</small>
+</div>
+
+<div class="page-content">
+
+<div class="analytics">
+
+<div class="card-1">
+<div class="card-head">
+<h2>200</h2>
+<span class="fa-solid fa-heart-pulse"></span>
+</div>
+<div class="card-progress">
+<small>Médicaments par ordonnance</small>
+<div class="card-indicator">
+<div class="indicator one" style="width: 60%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>230</h2>
+<span class="fa-solid fa-briefcase-medical"></span>
+</div>
+<div class="card-progress">
+<small>Antibiotiques </small>
+<div class="card-indicator">
+<div class="indicator two" style="width: 80%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>200</h2>
+<span class="fa-solid fa-prescription"></span>
+</div>
+<div class="card-progress">
+<small>Observance du traitement </small>
+<div class="card-indicator">
+<div class="indicator three" style="width: 65%"></div>
+</div>
+</div>
+</div>
+
+<div class="card-1">
+<div class="card-head">
+<h2>500</h2>
+<span class="fa-solid fa-bed"></span>
+</div>
+<div class="card-progress">
+<small>Patients</small>
+<div class="card-indicator">
+<div class="indicator four" style="width: 90%"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="records table-responsive">
+
+<div class="record-header">
+<div class="add">
+<span>Entrées</span>
+<select name="" id="">
+<option value="">ID</option>
+</select>
+<button id="addConsultation">Gestion des Prescriptions</button>
+</div>
+
+<div class="browse">
+<input type="search" placeholder="Rechercher" class="record-search">
+<select name="" id="">
+<option value="">Statut</option>
+</select>
+</div>
+</div>
+
+<div>
+<div class="main--content">
+    <div class="header--wrapper">
+        <div class="header--title">
+            
+        </div>
+        <div class="user--info">
+            <div class="search--box">
+                <i class="fa-solid fa-search"></i>
+                
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="card">
+           
+            <div class="form-group">
+                <label for="patientName">Nom du Patient:</label>
+                <input type="text" id="patientName" placeholder="Entrez le nom du patient">
+            </div>
+            <div class="form-group">
+                <label for="medicamentName">Nom du Médicament:</label>
+                <input type="text" id="medicamentName" placeholder="Entrez le nom du médicament">
+            </div>
+            <div class="form-group">
+                <label for="dosage">Dosage:</label>
+                <input type="text" id="dosage" placeholder="Entrez le dosage">
+            </div>
+            <div class="form-group">
+                <label for="prescriptionDate">Date de Prescription:</label>
+                <input type="date" id="prescriptionDate">
+            </div>
+            <button id="addPrescription">Ajouter Prescription</button>
+        </div>
+
+        <div class="card">
+            <h2>Détails de la Prescription</h2>
+            <div class="invoice-card">
+                <img src="img/logom.jpg" alt="Logo de la Pharmacie" style="width: 100px;height: auto;margin-bottom: 10px">
+                <h2>CLINIMEDIC</h2>
+                <h3>Détails de la Prescription</h3>
+                <div id="prescriptionDetails"></div>
+                <button id="printPrescriptionButton">Imprimer Détails</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>Liste des Prescriptions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom du Patient</th>
+                <th>Nom du Médicament</th>
+                <th>Dosage</th>
+                <th>Date de Prescription</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="prescriptionList"></tbody>
+    </table>
+</div>
+<style>
+        
+        .header--wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .header--title h2 {
+            color: #22BAA0; /* Couleur verte pour la santé */
+        }
+        .user--info {
+            display: flex;
+            align-items: center;
+        }
+        .search--box {
+            position: relative;
+        }
+        .search--box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+    }
+    .main-content {
+        flex: 1;
+        padding: 20px;
+    }
+    h1 {
+        color: #22BAA0;
+    }
+    .form-container {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .card {
+        background-color: #e9ecef;
+        border-radius: 0px;
+        padding: 15px;
+        flex: 1 1 300px;
+    }
+    .card-1 {
+        background-color: #fff;
+        border-radius: 0px;
+        padding: 15px;
+        flex: 1 1 300px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    input, button {
+        padding: 10px;
+        width: 100%;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #22BAA0;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #22BAA0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+    .icon {
+        cursor: pointer;
+        color: #22BAA0;
+        margin-right: 10px;
+    }
+    .icon:hover {
+        color: #22BAA0;
+    }
+    .invoice-card {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #22BAA0;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    .invoice-card h2 {
+        color: #22BAA0;
+    }
+    @media print {
+        body * {
+            visibility: hidden;
+        }
+        .invoice-card, .invoice-card * {
+            visibility: visible;
+        }
+        .invoice-card {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+   
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .icon {
+            cursor: pointer;
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .icon:hover {
+            color: #218838;
+        }
+        .invoice-card {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #28a745;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .invoice-card h2 {
+            color: #28a745;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .invoice-card, .invoice-card * {
+                visibility: visible;
+            }
+            .invoice-card {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+   
+</style>
+<script>
+    let prescriptions = [];
+
+    document.getElementById('addPrescription').addEventListener('click', function() {
+        const patientName = document.getElementById('patientName').value;
+        const medicamentName = document.getElementById('medicamentName').value;
+        const dosage = document.getElementById('dosage').value;
+        const prescriptionDate = document.getElementById('prescriptionDate').value;
+
+        if (!patientName || !medicamentName || !dosage || !prescriptionDate) {
+            alert("Veuillez remplir tous les champs !");
+            return;
+        }
+
+        const prescription = {
+            patient: patientName,
+            medicament: medicamentName,
+            dosage: dosage,
+            date: prescriptionDate,
+        };
+
+        prescriptions.push(prescription);
+        updatePrescriptionTable();
+        displayPrescriptionDetails();
+        resetForm();
+    });
+
+    function updatePrescriptionTable() {
+        const prescriptionList = document.getElementById('prescriptionList');
+        prescriptionList.innerHTML = '';
+        prescriptions.forEach((prescription, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${prescription.patient}</td>
+                <td>${prescription.medicament}</td>
+                <td>${prescription.dosage}</td>
+                <td>${prescription.date}</td>
+                <td>
+                    <button class="delete-button icon" onclick="deletePrescription(${index})">Supprimer</button>
+                </td>
+            `;
+            prescriptionList.appendChild(row);
+        });
+        if (prescriptions.length === 0) {
+            prescriptionList.innerHTML = '<tr><td colspan="5">Aucune prescription disponible.</td></tr>';
+        }
+    }
+
+    function displayPrescriptionDetails() {
+        const prescriptionDetails = document.getElementById('prescriptionDetails');
+        prescriptionDetails.innerHTML = ''; // Clear previous details
+        prescriptions.forEach((prescription, index) => {
+            prescriptionDetails.innerHTML += `
+                <div>
+                    <strong>Prescription ${index + 1}:</strong><br>
+                    Patient: ${prescription.patient}<br>
+                    Médicament: ${prescription.medicament}<br>
+                    Dosage: ${prescription.dosage}<br>
+                    Date de Prescription: ${prescription.date}<br>
+                    <hr>
+                </div>
+            `;
+        });
+        // If no prescriptions, show a message
+        if (prescriptions.length === 0) {
+            prescriptionDetails.innerHTML = '<p>Aucune prescription disponible.</p>';
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('patientName').value = '';
+        document.getElementById('medicamentName').value = '';
+        document.getElementById('dosage').value = '';
+        document.getElementById('prescriptionDate').value = '';
+    }
+
+    function deletePrescription(index) {
+        prescriptions.splice(index, 1);
+        updatePrescriptionTable();
+        displayPrescriptionDetails();
+    }
+
+    document.getElementById('printPrescriptionButton').addEventListener('click', function() {
+        const prescriptionDetails = document.getElementById('prescriptionDetails').innerHTML;
+        const newWindow = window.open('', '', 'width=600,height=400');
+        newWindow.document.write('<h1>Détails de la Prescription</h1>');
+        newWindow.document.write(prescriptionDetails);
+        newWindow.document.close();
+        newWindow.print();
+    });
+    </script>
+</body>
+</html>
